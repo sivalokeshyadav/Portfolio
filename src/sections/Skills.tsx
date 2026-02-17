@@ -70,7 +70,7 @@ const Skills = () => {
 
                     <Grid container spacing={3}>
                         {skillCategories.map((category, index) => (
-                            <Grid item xs={12} md={6} key={index}>
+                            <Grid size={{ xs: 12, md: 6 }} key={index}>
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}

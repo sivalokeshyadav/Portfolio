@@ -3,6 +3,14 @@ import { motion } from 'framer-motion';
 import { Download, Visibility } from '@mui/icons-material';
 
 const Resume = () => {
+    const experience = [
+        {
+            role: 'Frontend Developer',
+            company: 'Thinklusive',
+            description: 'Working on Market360 - Business intelligence platform and CMCIntel - Chemical intelligence system',
+        },
+    ];
+
     return (
         <Box
             id="resume"
@@ -108,22 +116,16 @@ const Resume = () => {
                                 Experience
                             </Typography>
                             <Stack spacing={3}>
-                                <Box>
-                                    <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                                        Frontend Developer @ Thinklusive
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Working on Market360 - Business intelligence platform
-                                    </Typography>
-                                </Box>
-                                <Box>
-                                    <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                                        React Developer @ CMC Intel
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Developing ChemBank2 - Chemical intelligence system
-                                    </Typography>
-                                </Box>
+                                {experience.map((exp, index) => (
+                                    <Box key={index}>
+                                        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                                            {exp.role} @ {exp.company}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {exp.description}
+                                        </Typography>
+                                    </Box>
+                                ))}
                             </Stack>
                         </Box>
                     </Paper>

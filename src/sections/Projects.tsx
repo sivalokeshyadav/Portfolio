@@ -56,7 +56,7 @@ const Projects = () => {
 
                     <Grid container spacing={4}>
                         {projects.map((project, index) => (
-                            <Grid item xs={12} key={index}>
+                            <Grid size={12} key={index}>
                                 <motion.div
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}

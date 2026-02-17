@@ -51,10 +51,10 @@ const About = () => {
                     />
 
                     <Grid container spacing={4} alignItems="center">
-                        <Grid item xs={12} md={6}>
+                        <Grid size={{ xs: 12, md: 6 }}>
                             <Typography variant="body1" paragraph sx={{ fontSize: '1.125rem', lineHeight: 1.8 }}>
                                 I'm a passionate Frontend Developer specializing in building exceptional digital
-                                experiences. Currently working at <strong>Thinklusive</strong> and <strong>CMC Intel</strong>,
+                                experiences. Currently working at <strong>Thinklusive</strong>,
                                 where I've contributed to enterprise-level applications serving thousands of users.
                             </Typography>
                             <Typography variant="body1" paragraph sx={{ fontSize: '1.125rem', lineHeight: 1.8 }}>
@@ -69,7 +69,7 @@ const About = () => {
                             </Typography>
                         </Grid>
 
-                        <Grid item xs={12} md={6}>
+                        <Grid size={{ xs: 12, md: 6 }}>
                             <Box
                                 sx={{
                                     display: 'flex',
@@ -101,7 +101,7 @@ const About = () => {
                             </Box>
                             <Grid container spacing={2}>
                                 {highlights.map((item, index) => (
-                                    <Grid item xs={12} key={index}>
+                                    <Grid size={12} key={index}>
                                         <motion.div
                                             initial={{ opacity: 0, x: 20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
